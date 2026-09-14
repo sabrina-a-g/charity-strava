@@ -40,38 +40,38 @@ const DISCOVER_CARDS = [
     img: "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=400&fit=crop&auto=format",
     tag: "Wedding Fund",
     title: "Maya & Jordan's Big Day",
-    detail: "94 mi logged · $3,240 saved",
+    detail: "94 mi logged",
     pct: 38,
   },
   {
     img: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&h=400&fit=crop&auto=format",
     tag: "Home Down Payment",
     title: "First Home by Spring 2027",
-    detail: "320 mi this quarter · $8,100 saved",
+    detail: "320 mi this quarter",
     pct: 37,
   },
   {
     img: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&h=400&fit=crop&auto=format",
     tag: "Charity",
     title: "Running for Girls on the Run",
-    detail: "188 mi logged · $940 donated",
+    detail: "188 mi logged",
     pct: 78,
   },
   {
     img: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&h=400&fit=crop&auto=format",
     tag: "Family Fund",
     title: "Baby on the Way",
-    detail: "112 mi · $560 saved",
+    detail: "112 mi logged",
     pct: 22,
   },
 ];
 
 const LIVE_FEED = [
-  { name: "DeShawn W.", action: "logged 10.1 mi", earned: "+$5.05", goal: "Wedding Fund", time: "2m ago" },
-  { name: "Sara R.", action: "logged 18.5 mi", earned: "+$9.25", goal: "Home Fund", time: "14m ago" },
-  { name: "Alex K.", action: "logged 8.0 mi", earned: "+$4.00", goal: "Girls on the Run", time: "31m ago" },
-  { name: "Priya N.", action: "logged 6.2 mi", earned: "+$3.10", goal: "Wedding Fund", time: "1h ago" },
-  { name: "Marcus T.", action: "logged 22.0 mi", earned: "+$11.00", goal: "Home Fund", time: "2h ago" },
+  { name: "DeShawn W.", action: "logged 10.1 mi", goal: "Wedding Fund", time: "2m ago" },
+  { name: "Sara R.", action: "logged 18.5 mi", goal: "Home Fund", time: "14m ago" },
+  { name: "Alex K.", action: "logged 8.0 mi", goal: "Girls on the Run", time: "31m ago" },
+  { name: "Priya N.", action: "logged 6.2 mi", goal: "Wedding Fund", time: "1h ago" },
+  { name: "Marcus T.", action: "logged 22.0 mi", goal: "Home Fund", time: "2h ago" },
 ];
 
 const CHARITIES = [
@@ -87,21 +87,21 @@ const TESTIMONIALS = [
   {
     quote: "I've tried every savings app. DistanceForDollars is the only one that made me actually look forward to checking my balance.",
     name: "Maya Chen",
-    detail: "Half marathon runner · $3,200 saved",
+    detail: "Half marathon runner · 94 miles logged",
     avatar: "MC",
     img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&auto=format",
   },
   {
     quote: "Accountability changed everything. I know every mile I skip is a dollar not going to the cause I believe in.",
     name: "DeShawn Williams",
-    detail: "Trail runner · $840 donated",
+    detail: "Trail runner · 100 miles logged",
     avatar: "DW",
     img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&auto=format",
   },
   {
     quote: "We set $0.50/mile and didn't think much of it. We've contributed $1,100 to our home fund this year.",
     name: "Sara & Tom Reyes",
-    detail: "Cycling couple · 2,200 miles",
+    detail: "Cycling couple · 2,200 miles logged",
     avatar: "SR",
     img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop&auto=format",
   },
@@ -215,8 +215,7 @@ export default function Page() {
                   <span className="w-1.5 h-1.5 rounded-full bg-[#FFBF00]"></span>
                   <span className="text-white/70 text-xs font-mono-data">{f.name}</span>
                   <span className="text-white/40 text-xs">{f.action}</span>
-                  <span className="text-[#007EFF] text-xs font-mono-data font-medium">{f.earned}</span>
-                  <span className="text-white/30 text-xs">→ {f.goal}</span>
+                  <span className="text-[#007EFF] text-xs font-mono-data font-medium">→ {f.goal}</span>
                   <span className="text-white/25 text-xs">{f.time}</span>
                 </div>
               ))}
